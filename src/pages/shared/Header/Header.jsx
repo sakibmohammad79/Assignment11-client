@@ -1,6 +1,16 @@
 import { Link } from "react-router-dom"
 import logo from '../../../assets/logo1.png'
+import { useContext } from "react";
+import { UserContext } from "../../../providers/AuthProvider";
+import Tippy from "@tippyjs/react";
 const Header = () => {
+  const {user, logOut} = useContext(UserContext);
+
+    const handleLogOut = () =>{
+        logOut()
+        .then(result => console.log(result))
+        .catch(error => console.log(error.message))
+    }
     const navItems =
         <>
           <li><Link className="text-white hover:text-rose-500 font-bold" to="/">Home</Link> </li>
@@ -42,7 +52,19 @@ const Header = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-rose-500 border-none">Get started</a>
+      <div className="mr-4">
+      {
+            user && 
+                  <>
+                <Tippy  content={user.displayName}><img className="rounded text-white" src="https://i.postimg.cc/wBDmGn68/images.png" style={{height: '40px', width: '40px'}}/></Tippy>
+            </>
+        }
+      </div>
+        {
+          user ? 
+          <Link onClick={handleLogOut} className="btn bg-rose-500 border-none">Sign Out</Link> :
+          <Link to='/login' className="btn bg-rose-500 border-none">Login</Link>
+        }
       </div>
     </div>
   );

@@ -27,7 +27,7 @@ const Banner = () => {
       <h2 className='font-extrabold text-black text-6xl '>Baby Kids Toys</h2>
       <p className='font-semibold text-rose-300'>Get up to 30% off on your first delivery</p>
       <div>
-        <button className="btn bg-teal-300 mr-5 mb-4 md:mb-0">Shop Now</button>
+        <button className="btn border-none bg-teal-300 mr-5 mb-4 md:mb-0">Shop Now</button>
       </div>
     </div>
     </div>
@@ -44,7 +44,7 @@ const Banner = () => {
       <h2 className='font-extrabold text-black text-6xl '>Baby Kids Toys</h2>
       <p className='font-semibold text-rose-300'>Get up to 30% off on your first delivery</p>
       <div>
-        <button className="btn bg-teal-300 mr-5 mb-4 md:mb-0">Shop Now</button>
+        <button className="btn border-none bg-teal-300 mr-5 mb-4 md:mb-0">Shop Now</button>
       </div>
     </div>
     </div>
