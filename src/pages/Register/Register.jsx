@@ -6,7 +6,7 @@ import { UserContext} from "../../providers/AuthProvider";
 
 
 const Register = () => {
-    const {registerUser, setLoad} = useContext(UserContext);
+    const {registerUser, googleSignIn, githubSignIn, setLoad} = useContext(UserContext);
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(null);
 
@@ -47,8 +47,36 @@ const Register = () => {
       .catch((error)=>{
         setError(error.message);
       })
+      
     }
 
+    const handleGoogleSignIn = () => {
+      googleSignIn()
+        .then((result) => {
+          const signInUser = result.user;
+          console.log(signInUser);
+          setSuccess("User sign in by google successfully");
+          setError("");
+          //navigate(from);
+        })
+        .catch((error) => {
+          setError(error.message);
+          setSuccess("");
+        });
+    };
+    const handleGithubSignIn = () => {
+      githubSignIn()
+        .then((result) => {
+          console.log(result);
+          setSuccess("User sign in by google successfully");
+          setError("");
+          //navigate(from);
+        })
+        .catch((error) => {
+          setError(error.message);
+          setSuccess("");
+        }); 
+      }
     return (
         <div className="hero min-h-screen bg-base-200">
   <div className="hero-content">
@@ -86,8 +114,8 @@ const Register = () => {
         <p className="font-medium text-center"><small>Already have an account? <Link to="/login" className="text-rose-500 font-bold">Please Login</Link> </small></p>
         <div className="divider">OR</div>
         <div className="text-center">
-        <button className="btn btn-outline btn-accent" style={{width: '90%'}}><FaGoogle style={{width: '2rem', height: '1.5rem'}}></FaGoogle> Sign In With Google</button>
-        <button className="btn btn-outline btn-accent w-full mt-3" style={{width: '90%'}}><FaGithub style={{width: '2rem', height: '1.5rem'}}></FaGithub> Sign In With Github</button>
+        <button onClick={handleGoogleSignIn} className="btn btn-outline btn-accent" style={{width: '90%'}}><FaGoogle style={{width: '2rem', height: '1.5rem'}}></FaGoogle> Sign In With Google</button>
+        <button onClick={handleGithubSignIn} className="btn btn-outline btn-accent w-full mt-3" style={{width: '90%'}}><FaGithub style={{width: '2rem', height: '1.5rem'}}></FaGithub> Sign In With Github</button>
         </div>
         <p className="text-center text-rose-500"><small>{error}</small></p>
         <p className="text-center text-teal-300"><small>{success}</small></p>
