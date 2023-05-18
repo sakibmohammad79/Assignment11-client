@@ -14,7 +14,13 @@ const Header = () => {
     const navItems =
         <>
           <li><Link className="text-white hover:text-rose-500 font-bold" to="/">Home</Link> </li>
-          <li><Link className="text-white hover:text-rose-500 font-bold"  to="">About</Link></li>
+          <li><Link className="text-white hover:text-rose-500 font-bold"  to="/alltoys">All Toys</Link></li>
+          { user &&
+            <>
+            <li><Link className="text-white hover:text-rose-500 font-bold"  to="/addtoys">Add Toys</Link></li>
+            <li><Link className="text-white hover:text-rose-500 font-bold"  to="/mytoys">My Toys</Link></li>
+            </>
+          }
           <li><Link className="text-white hover:text-rose-500 font-bold" to="">Blog</Link></li>
         </>
   return (
