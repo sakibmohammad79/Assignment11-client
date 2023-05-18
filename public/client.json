@@ -1,0 +1,51 @@
+[
+    {
+      "client_img": "https://i.postimg.cc/sX8vg4j4/pexels-kampus-production-8353841.jpg",
+      "name": "John Doe",
+      "comment": "Great product! It exceeded my expectations and has been incredibly useful. The customer service was fantastic and provided timely assistance. Highly recommended!",
+      "rating": 5,
+      "comment_time": "1 hour ago",
+      "client": "Guest"
+    },
+    {
+      "client_img": "https://i.postimg.cc/xqV8Kjbk/pexels-anna-shvets-5325105.jpg",
+      "name": "Jane Smith",
+      "comment": "The service was excellent. The product quality is impressive, and I'm very satisfied. The delivery was prompt and hassle-free. Recommended!",
+      "rating": 4,
+      "comment_time": "50 min ago",
+      "client": "Guest"
+    },
+    {
+      "client_img": "https://i.postimg.cc/RCNsF7Q6/pexels-dinielle-de-veyra-4195342-1.jpg",
+      "name": "David Johnson",
+      "comment": "Average experience. The product works fine, but it could be better. The customer support was decent. Okay for the price.",
+      "rating": 3,
+      "comment_time": "1 hour 20 min ago",
+      "client": "Guest"
+    },
+    {
+      "client_img": "https://i.postimg.cc/h4zsgScV/pexels-linkedin-sales-navigator-2182970.jpg",
+      "name": "Sarah Williams",
+      "comment": "Excellent customer support! They were responsive and helped me throughout the purchasing process. The product is high-quality and meets my expectations. Very happy with my purchase!",
+      "rating": 5,
+      "comment_time": "1 hour 50 min ago",
+      "client": "Guest"
+    },
+    {
+      "client_img": "https://i.postimg.cc/QdbkSCJZ/pexels-andrea-piacquadio-3771839.jpg",
+      "name": "Michael Brown",
+      "comment": "The product arrived late, which was disappointing. However, the quality is good and it functions as described. Hoping for better delivery next time.",
+      "rating": 4,
+      "comment_time": "2 hour ago",
+      "client": "Guest"
+    },
+    {
+      "client_img": "https://i.postimg.cc/C5Tqwps4/pexels-linkedin-sales-navigator-2182982.jpg",
+      "name": "Emily Davis",
+      "comment": "Not satisfied with the product. It broke after a week of use. Reached out to customer service, but no response. Disappointing experience overall.",
+      "rating": 2,
+      "comment_time": "2 hour 30 min ago",
+      "client": "Guest"
+    }
+  ]
+  

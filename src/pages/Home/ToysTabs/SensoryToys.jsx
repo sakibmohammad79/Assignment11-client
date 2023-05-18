@@ -11,7 +11,7 @@ const SensoryToys = () => {
         .then((data)=>setToys(data))
     },[])
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12 px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12 max-w-6xl mx-auto">
             {
                 toys.map(toy => <SensoryToysList
                 key={toy._id}
