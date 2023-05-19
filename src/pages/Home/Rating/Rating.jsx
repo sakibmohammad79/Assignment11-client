@@ -11,7 +11,7 @@ const Rating = () => {
     },[])
     
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl
         mx-auto my-24">
             {
                 rating.map(singleRating => <RatingCurd

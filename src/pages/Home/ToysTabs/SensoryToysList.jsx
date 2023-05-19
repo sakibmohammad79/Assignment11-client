@@ -1,9 +1,10 @@
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
+import { Link } from 'react-router-dom';
 
 const SensoryToysList = ({ toy }) => {
     
- const { toy_pic, toy_name, price, rating} = toy;
+ const { _id, toy_pic, toy_name, price, rating} = toy;
   
   return (
     <div className="card card-side bg-base-100 shadow-xl">
@@ -26,7 +27,7 @@ const SensoryToysList = ({ toy }) => {
         <p className="font-bold">{rating}</p>
         </div>
         <div className="card-actions justify-end">
-          <button className="btn bg-teal-400 border-none">View Details</button>
+          <Link to={`/toysdetails/${_id}`}><button className="btn bg-teal-400 border-none">View Details</button></Link>
         </div>
       </div>
     </div>

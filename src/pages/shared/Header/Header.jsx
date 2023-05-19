@@ -62,7 +62,7 @@ const Header = () => {
       {
             user && 
                   <>
-                <Tippy  content={user.displayName}><img className="rounded text-white" src="https://i.postimg.cc/wBDmGn68/images.png" style={{height: '40px', width: '40px'}}/></Tippy>
+                <Tippy  content={user.displayName}><img className=" text-white rounded-full" src={user?.photoURL} style={{height: '50px', width: '50px'}}/></Tippy>
             </>
         }
       </div>
