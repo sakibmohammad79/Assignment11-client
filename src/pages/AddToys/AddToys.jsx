@@ -1,9 +1,71 @@
+import { useContext } from "react";
+import { UserContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const AddToys = () => {
+    const {user} = useContext(UserContext);
+    const handlerAddToys = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const toy_name = form.toy_name.value;
+        const price = form.price.value;
+        const rating = form.rating.value;
+        const quantity = form.quantity.value;
+        const details = form.details.value;
+        const category = form.category.value;
+        const toy_pic = form.toy_pic.value;
+        const sellerName = user?.displayName;
+        const email = user?.email;
+
+        const newToy = {
+            toy_name,
+            price,
+            rating,
+            quantity,
+            details,
+            category,
+            toy_pic,
+            email,
+            sellerName
+        }
+
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, added it!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+            fetch('http://localhost:5000/toys', {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newToy)
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data);
+            if(data.insertedId){
+                  Swal.fire(
+                'Added!',
+                'Your file has been added.',
+                'success'
+              )
+            }
+        })
+        }
+        })
+
+        
+    }
     return (
     <div className="hero p-16  bg-base-200">
     <div className="card w-3/4 mx-auto  shadow-2xl bg-base-100">
-      <form>
+      <form onSubmit={handlerAddToys}>
       <h2 className="text-3xl text-rose-500 font-bold text-center pt-6">Your Favourite Toy Add!</h2>
       <div className="card-body ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -11,7 +73,7 @@ const AddToys = () => {
           <label className="label">
             <span className="label-text">Toy Name</span>
           </label>
-          <input type="text" name="toyName" placeholder="Name" className="input input-bordered" />
+          <input type="text" name="toy_name" placeholder="Name" className="input input-bordered" />
             </div>
             <div className="form-control">
           <label className="label">
@@ -47,24 +109,24 @@ const AddToys = () => {
           <label className="label">
             <span className="label-text">Seller Name</span>
           </label>
-          <input type="text" name="sellerName" placeholder="Name" className="input input-bordered" />
+          <input type="text" defaultValue={user?.displayName} name="sellerName" placeholder="Name" className="input input-bordered" />
             </div>
             <div className="form-control">
           <label className="label">
             <span className="label-text">Seller Email</span>
           </label>
-          <input type="text" name="email" placeholder="Email" className="input input-bordered" />
+          <input type="text" defaultValue={user?.email} name="email" placeholder="Email" className="input input-bordered" />
             </div>
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Toy Photo URL</span>
           </label>
-          <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered" />
+          <input type="text" name="toy_pic" placeholder="Photo URL" className="input input-bordered" />
             </div>
 
-        <div className="form-control mt-6 w-full">
-          <button className="btn bg-teal-500 border-none">Add Toy</button>
+        <div className="form-control mt-6 ">
+          <input className="btn bg-teal-500 border-none" type="submit" value="ADD TOY" />
         </div>
       </div>
       </form>

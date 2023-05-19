@@ -1,9 +1,10 @@
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const MotorToysList = ({toy}) => {
-
+    const toyDetails = useLoaderData();
+    console.log(toyDetails);
     const { _id, toy_pic, toy_name, price, rating} = toy;
     return (
         <div className="card card-side bg-base-100 shadow-xl">
