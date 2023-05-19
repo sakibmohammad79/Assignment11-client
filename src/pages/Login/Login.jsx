@@ -66,7 +66,7 @@ const Login = () => {
         <div className="hero min-h-screen bg-base-200">
   <div className="hero-content md:flex">
   <div className="w-1/2">
-        <img src="https://i.postimg.cc/rscHpTvN/6325230-1.jpg" alt="" />
+        <img className="shadow-2xl" src="https://i.postimg.cc/rscHpTvN/6325230-1.jpg" alt="" />
     </div>
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
       <form onSubmit={handleLogIn}>

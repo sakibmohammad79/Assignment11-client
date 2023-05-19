@@ -6,7 +6,7 @@ const MotorToys = () => {
     const [toys, setToys] = useState([]);
     console.log(toys);
     useEffect(()=>{
-        fetch('http://localhost:5000/toys?category=Motor%20Skills%20Development%20Toys')
+        fetch('https://assignment11-toy-market-place-server.vercel.app/toys?category=Motor%20Skills%20Development%20Toys')
         .then((res)=>res.json())
         .then((data)=>setToys(data))
     },[])

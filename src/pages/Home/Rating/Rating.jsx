@@ -5,7 +5,7 @@ const Rating = () => {
     const [rating, setRating] = useState([]);
     
     useEffect(()=>{
-        fetch('http://localhost:5000/client')
+        fetch('https://assignment11-toy-market-place-server.vercel.app/client')
         .then((res) => res.json())
         .then((data) => setRating(data))
     },[])

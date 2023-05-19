@@ -6,7 +6,7 @@ const AllToys = () => {
   console.log(toys);
 
   useEffect(() => {
-    fetch("http://localhost:5000/toys")
+    fetch("https://assignment11-toy-market-place-server.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => setToys(data));
   }, []);

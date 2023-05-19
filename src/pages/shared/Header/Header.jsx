@@ -17,11 +17,11 @@ const Header = () => {
           <li><Link className="text-white hover:text-rose-500 font-bold"  to="/alltoys">All Toys</Link></li>
           { user &&
             <>
-            <li><Link className="text-white hover:text-rose-500 font-bold"  to="/addtoys">Add Toys</Link></li>
+            <li><Link className="text-white hover:text-rose-500 font-bold"  to="/addtoys">Add A Toys</Link></li>
             <li><Link className="text-white hover:text-rose-500 font-bold"  to="/mytoys">My Toys</Link></li>
             </>
           }
-          <li><Link className="text-white hover:text-rose-500 font-bold" to="">Blog</Link></li>
+          <li><Link className="text-white hover:text-rose-500 font-bold" to="/blog">Blog</Link></li>
         </>
   return (
     <div className="navbar bg-teal-300">

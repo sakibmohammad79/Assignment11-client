@@ -10,6 +10,7 @@ import MyToys from "../pages/MyToys/MyToys";
 import ToyDetails from "../pages/Home/ToyDetails/ToyDetails";
 import UpdateToys from "../pages/UpdateToys/UpdateToys";
 import PrivateRoute from "./PrivateRoute";
+import Blog from "../pages/Blog/Blog";
 
 const router = createBrowserRouter([
     {
@@ -29,31 +30,35 @@ const router = createBrowserRouter([
           element: <Register></Register>
         },
         {
-          path: "alltoys",
+          path: "/alltoys",
           element: <AllToys></AllToys>
         },
         {
-          path: "addtoys",
+          path: "/addtoys",
           element: <PrivateRoute><AddToys></AddToys></PrivateRoute>
         },
         {
-          path: "mytoys",
+          path: "/mytoys",
           element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
         },
         {
           path: "/toysdetails/:id",
           element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+          loader: ({params}) => fetch(`https://assignment11-toy-market-place-server.vercel.app/toys/${params.id}`)
         },
         {
           path: '/updatetoys/:id',
           element: <UpdateToys></UpdateToys>,
-          loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+          loader: ({params}) => fetch(`https://assignment11-toy-market-place-server.vercel.app/toys/${params.id}`)
+        },
+        {
+          path: '/blog',
+          element: <Blog></Blog>
         }
       ]
     },
     {
-      path: '*',
+      path: '/*',
       element: <Error></Error>
     }
   ]);

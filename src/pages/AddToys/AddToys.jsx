@@ -39,7 +39,7 @@ const AddToys = () => {
             confirmButtonText: 'Yes, added it!'
           }).then((result) => {
             if (result.isConfirmed) {
-            fetch('http://localhost:5000/toys', {
+            fetch('https://assignment11-toy-market-place-server.vercel.app/toys', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

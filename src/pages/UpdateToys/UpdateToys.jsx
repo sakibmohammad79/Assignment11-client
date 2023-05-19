@@ -39,7 +39,7 @@ const UpdateToys = () => {
             confirmButtonText: 'Yes, Updated it!'
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/update/${id}`, {
+                fetch(`https://assignment11-toy-market-place-server.vercel.app/update/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
