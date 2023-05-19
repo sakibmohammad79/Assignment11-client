@@ -2,6 +2,25 @@ import logo from "../../../assets/logo1.png"
 const Footer = () => {
   return (
     <footer className="footer footer-center p-10 bg-teal-300 text-primary-content">
+      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className="text-center">
+          <p className="font-bold text-lg">Our Address</p>
+          <p className="font-bold">
+            22 Alnahas Building, 2 AlBahr St, Tanta
+          </p>
+          <p className="font-bold">Al-Gharbia Governorate, Egypt</p>
+        </div>
+        <div className="text-center">
+          <p className="font-bold text-lg">Opening Hours</p>
+          <p className="font-bold">Mon – Fri: 10 AM – 11 PM</p>
+          <p className="font-bold">Sat – Sun: 9 AM – 1 PM</p>
+        </div>
+        <div className="text-center">
+          <p className="font-bold text-lg">Private Dinning</p>
+          <p className="font-bold">Main Email: Babette@7oroof.com</p>
+          <p className="font-bold">Phone: 02 0106670721</p>
+        </div>
+      </div>
       <div>
         <img src={logo} alt="" />
         <p className="font-bold">

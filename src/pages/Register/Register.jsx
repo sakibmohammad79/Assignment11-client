@@ -20,6 +20,7 @@ const Register = () => {
 
         registerUser(email, password)
         .then(result =>{
+          setLoad(false)
             const registerUser = result.user;
             console.log(registerUser);
             form.reset();
@@ -57,7 +58,6 @@ const Register = () => {
           console.log(signInUser);
           setSuccess("User sign in by google successfully");
           setError("");
-          //navigate(from);
         })
         .catch((error) => {
           setError(error.message);
@@ -70,7 +70,6 @@ const Register = () => {
           console.log(result);
           setSuccess("User sign in by google successfully");
           setError("");
-          //navigate(from);
         })
         .catch((error) => {
           setError(error.message);
@@ -117,8 +116,8 @@ const Register = () => {
         <button onClick={handleGoogleSignIn} className="btn btn-outline btn-accent" style={{width: '90%'}}><FaGoogle style={{width: '2rem', height: '1.5rem'}}></FaGoogle> Sign In With Google</button>
         <button onClick={handleGithubSignIn} className="btn btn-outline btn-accent w-full mt-3" style={{width: '90%'}}><FaGithub style={{width: '2rem', height: '1.5rem'}}></FaGithub> Sign In With Github</button>
         </div>
-        <p className="text-center text-rose-500"><small>{error}</small></p>
-        <p className="text-center text-teal-300"><small>{success}</small></p>
+        <p className="text-center font-bold text-rose-600"><small>{error}</small></p>
+        <p className="text-center font-bold text-teal-500"><small>{success}</small></p>
       </div> 
       </form>
     </div>

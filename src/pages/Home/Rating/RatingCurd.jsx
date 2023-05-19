@@ -15,8 +15,8 @@ const RatingCurd = ({ singleRating }) => {
         <h2 className="card-title">{name}</h2>
         <p className='font-medium text-slate-500'>{comment}</p>
        <div className='flex justify-between'>
-        <p className='font-bold text-orange-400'>{comment_time}</p>
-        <p className='font-bold text-orange-400'>{client}</p>
+        <p className='font-bold text-teal-400'>{comment_time}</p>
+        <p className='font-bold text-teal-400'>{client}</p>
        </div>
       </div>
     </div>

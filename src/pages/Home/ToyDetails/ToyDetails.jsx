@@ -38,9 +38,9 @@ const ToyDetails = () => {
         </div>
         <div className="card-actions">
           {/* <button className="btn btn-primary">Buy Now</button> */}
-          <p className="flex mt-4">
+          <p className="flex mt-4 items-center">
           <Rating
-            style={{ maxWidth: 110 }}
+            style={{ maxWidth: 150 }}
             value={rating}
             readOnly
         /> 

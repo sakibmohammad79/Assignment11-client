@@ -3,7 +3,7 @@ const Banner = () => {
     return (
         <div className="carousel w-full" style={{height: '550px'}}>
   <div id="slide1" className="carousel-item relative w-full">
-    <img  src="https://i.postimg.cc/QdQ3RGts/pexels-pixabay-265987.jpg" className="w-full" />
+    <img  src="https://i.postimg.cc/RCpVmTk0/pexels-kha-ruxury-913179.jpg" className="w-full" />
     <div className="h-full flex items-center  absolute  left-0 top-0 text-white ">
       <div className='w-full text-white space-y-6 pl-8'>
       <h3 className='text-5xl bold text-rose-600'>Hot & Trendy</h3>
@@ -20,7 +20,7 @@ const Banner = () => {
     </div>
   </div> 
   <div id="slide2" className="carousel-item relative w-full">
-    <img src="https://i.postimg.cc/W1NdWnN9/1-83c59c5b-562d-4fa4-9e35-fe34c3861314.webp" className="w-full" />
+    <img src="https://i.postimg.cc/t4qjVnQc/pexels-tu-nguyen-8799784.jpg" className="w-full" />
     <div className="h-full flex items-center  absolute  left-0 top-0 text-white ">
       <div className='w-full text-white space-y-6 pl-8'>
       <h3 className='text-5xl bold text-rose-600'>Hot & Trendy</h3>

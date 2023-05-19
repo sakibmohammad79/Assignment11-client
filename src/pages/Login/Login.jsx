@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { UserContext } from "../../providers/AuthProvider";
@@ -10,9 +10,9 @@ const Login = () => {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
 
-//   const navigate = useNavigate();
-//   const location = useLocation();
-//   const from = location.state?.form?.pathname || "/";
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   const handleLogIn = (event) => {
     event.preventDefault();
@@ -27,7 +27,7 @@ const Login = () => {
         form.reset();
         setSuccess("User successfully login");
         setError("");
-        //navigate(from);
+        navigate(from);
       })
       .catch((error) => {
         console.log(error.message);
@@ -42,7 +42,7 @@ const Login = () => {
         console.log(signInUser);
         setSuccess("User sign in by google successfully");
         setError("");
-        //navigate(from);
+        navigate(from);
       })
       .catch((error) => {
         setError(error.message);
@@ -55,7 +55,7 @@ const Login = () => {
         console.log(result);
         setSuccess("User sign in by google successfully");
         setError("");
-        //navigate(from);
+        navigate(from);
       })
       .catch((error) => {
         setError(error.message);
@@ -76,13 +76,13 @@ const Login = () => {
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="text" placeholder="email" className="input input-bordered" />
+          <input type="text" name="email" placeholder="email" className="input input-bordered" />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="text" placeholder="password" className="input input-bordered" />
+          <input type="text" name="password" placeholder="password" className="input input-bordered" />
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
