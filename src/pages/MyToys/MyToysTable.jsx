@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { UserContext } from "../../providers/AuthProvider";
+import { Link } from "react-router-dom";
 
 const MyToysTable = ({ toy, handleDelete }) => {
   const { user } = useContext(UserContext);
@@ -47,7 +48,7 @@ const MyToysTable = ({ toy, handleDelete }) => {
       <td>{rating}</td>
       <td>{details}</td>
       <th>
-        <button className="btn bg-teal-400 border-none">Update</button>
+        <Link to={`/updatetoys/${_id}`}><button className="btn bg-teal-400 border-none">Update</button></Link>
       </th>
     </tr>
   );
