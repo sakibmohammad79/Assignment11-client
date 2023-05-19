@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import { UserContext } from "../../providers/AuthProvider";
 
+
 const ToysCard = ({toy}) => {
     const {user} = useContext(UserContext)
-    const {toy_pic, toy_name, category, price, quantity, } = toy;
+    const {toy_pic, toy_name, category, price, quantity } = toy;
     return (
         <tr>
         <th>
@@ -25,12 +26,12 @@ const ToysCard = ({toy}) => {
           </div>
         </td>
         <td>
-          <p className="badge badge-ghost badge-sm font-bold">{user.displayName}</p>
+          <p className="font-bold text-slate-600">{user?.displayName}</p>
         </td>
         <td>{price}</td>
         <td>{quantity}</td>
         <th>
-          <button className="btn btn-ghost btn-xs">View Details</button>
+          <button className="btn bg-teal-400 border-none">Details</button>
         </th>
       </tr>
     );

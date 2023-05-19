@@ -52,15 +52,13 @@ const AddToys = () => {
             if(data.insertedId){
                   Swal.fire(
                 'Added!',
-                'Your file has been added.',
+                'Your toys has been added.',
                 'success'
               )
             }
         })
         }
-        })
-
-        
+        })   
     }
     return (
     <div className="hero p-16  bg-base-200">
