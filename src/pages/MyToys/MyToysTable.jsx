@@ -43,7 +43,7 @@ const MyToysTable = ({ toy, handleDelete }) => {
       </td>
 
       <td>{user?.email}</td>
-      <td>{price}</td>
+      <td>{'$'+price}</td>
       <td>{quantity}</td>
       <td>{rating}</td>
       <td>{details}</td>

@@ -12,7 +12,7 @@ const UpdateToys = () => {
         event.preventDefault();
         const form = event.target;
         const toy_name = form.toy_name.value;
-        const price = form.price.value;
+        const price = parseFloat(form.price.value);
         const rating = form.rating.value;
         const quantity = form.quantity.value;
         const details = form.details.value;

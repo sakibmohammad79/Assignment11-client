@@ -3,12 +3,12 @@ const Banner = () => {
     return (
         <div className="carousel w-full" style={{height: '550px'}}>
   <div id="slide1" className="carousel-item relative w-full">
-    <img  src="https://i.postimg.cc/RCpVmTk0/pexels-kha-ruxury-913179.jpg" className="w-full" />
+    <img  src="https://i.postimg.cc/VNkkrnKG/pexels-tatiana-syrikova-3933025.jpg" className="w-full" />
     <div className="h-full flex items-center  absolute  left-0 top-0 text-white ">
       <div className='w-full text-white space-y-6 pl-8'>
       <h3 className='text-5xl bold text-rose-600'>Hot & Trendy</h3>
       <h2 className='font-extrabold text-black text-6xl '>Baby Kids Toys</h2>
-      <p className='font-semibold text-rose-300'>Get up to 30% off on your first delivery</p>
+      <p className='font-semibold text-white'>Get up to 30% off on your first delivery</p>
       <div>
         <button className="btn bg-teal-300 border-none mr-5 mb-4 md:mb-0">Shop Now</button>
       </div>
@@ -25,7 +25,7 @@ const Banner = () => {
       <div className='w-full text-white space-y-6 pl-8'>
       <h3 className='text-5xl bold text-rose-600'>Hot & Trendy</h3>
       <h2 className='font-extrabold text-black text-6xl '>Baby Kids Toys</h2>
-      <p className='font-semibold text-rose-300'>Get up to 30% off on your first delivery</p>
+      <p className='font-semibold text-white'>Get up to 30% off on your first delivery</p>
       <div>
         <button className="btn border-none bg-teal-300 mr-5 mb-4 md:mb-0">Shop Now</button>
       </div>
@@ -42,7 +42,7 @@ const Banner = () => {
       <div className='w-full text-white space-y-6 pl-8'>
       <h3 className='text-5xl bold text-rose-600'>Hot & Trendy</h3>
       <h2 className='font-extrabold text-black text-6xl '>Baby Kids Toys</h2>
-      <p className='font-semibold text-rose-300'>Get up to 30% off on your first delivery</p>
+      <p className='font-semibold text-white'>Get up to 30% off on your first delivery</p>
       <div>
         <button className="btn border-none bg-teal-300 mr-5 mb-4 md:mb-0">Shop Now</button>
       </div>

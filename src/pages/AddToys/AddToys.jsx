@@ -8,7 +8,7 @@ const AddToys = () => {
         event.preventDefault();
         const form = event.target;
         const toy_name = form.toy_name.value;
-        const price = form.price.value;
+        const price = parseFloat(form.price.value);
         const rating = form.rating.value;
         const quantity = form.quantity.value;
         const details = form.details.value;
@@ -55,6 +55,7 @@ const AddToys = () => {
                 'Your toys has been added.',
                 'success'
               )
+              form.reset();
             }
         })
         }
@@ -64,7 +65,7 @@ const AddToys = () => {
     <div className="hero p-16  bg-base-200">
     <div className="card w-3/4 mx-auto  shadow-2xl bg-base-100">
       <form onSubmit={handlerAddToys}>
-      <h2 className="text-3xl text-rose-500 font-bold text-center pt-6">Your Favourite Toy Add!</h2>
+      <h2 className="text-3xl text-rose-500 font-bold text-center pt-6">ADD YOUR FAVOURITE TOY!</h2>
       <div className="card-body ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="form-control">

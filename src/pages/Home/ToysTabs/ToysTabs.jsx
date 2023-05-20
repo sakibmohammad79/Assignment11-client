@@ -3,6 +3,7 @@ import "react-tabs/style/react-tabs.css";
 import SensoryToys from "./SensoryToys";
 import CognitiveToys from "./CognitiveToys";
 import MotorToys from "./MotorToys";
+
 const ToysTabs = () => {
   return (
     <div className="">

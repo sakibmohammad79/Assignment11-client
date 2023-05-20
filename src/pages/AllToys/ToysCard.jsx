@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const ToysCard = ({toy}) => {
     const {user} = useContext(UserContext)
-    const { _id, toy_pic, toy_name, category, price, quantity } = toy;
+    const { _id, toy_pic, toy_name, category, price, quantity, sellerName } = toy;
 
     const handleToast = () => {
       if(!user){
@@ -35,7 +35,7 @@ const ToysCard = ({toy}) => {
           </div>
         </td>
         <td>
-          <p className="font-bold text-slate-600">{user?.displayName}</p>
+          <p className="font-bold text-slate-600">{sellerName}</p>
         </td>
         <td>{'$'+price}</td>
         <td>{quantity}</td>
