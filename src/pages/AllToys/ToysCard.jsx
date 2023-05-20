@@ -1,11 +1,19 @@
 import { useContext } from "react";
 import { UserContext } from "../../providers/AuthProvider";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const ToysCard = ({toy}) => {
     const {user} = useContext(UserContext)
     const { _id, toy_pic, toy_name, category, price, quantity } = toy;
+
+    const handleToast = () => {
+      if(!user){
+        toast("You have to log in first to view details!");
+      }
+    }
     return (
         <tr>
         <th>
@@ -29,11 +37,12 @@ const ToysCard = ({toy}) => {
         <td>
           <p className="font-bold text-slate-600">{user?.displayName}</p>
         </td>
-        <td>{price}</td>
+        <td>{'$'+price}</td>
         <td>{quantity}</td>
         <th>
-          <Link to={`/toysdetails/${_id}`}><button className="btn bg-teal-400 border-none">Details</button></Link>
+          <Link to={`/toysdetails/${_id}`}><button onClick={handleToast} className="btn bg-teal-400 border-none">Details</button></Link>
         </th>
+        <ToastContainer></ToastContainer>
       </tr>
     );
 };

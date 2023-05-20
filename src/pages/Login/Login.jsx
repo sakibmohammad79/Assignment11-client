@@ -1,12 +1,11 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { useContext, useState } from "react";
+import {  useContext, useState } from "react";
 import { UserContext } from "../../providers/AuthProvider";
-
 
 const Login = () => {
 
-  const { logUser, googleSignIn, githubSignIn } = useContext(UserContext);
+  const { logUser, googleSignIn, githubSignIn} = useContext(UserContext);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
 
@@ -62,6 +61,7 @@ const Login = () => {
         setSuccess("");
       });
   }
+  
     return (
         <div className="hero min-h-screen bg-base-200">
   <div className="hero-content md:flex">

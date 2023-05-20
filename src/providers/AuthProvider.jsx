@@ -2,6 +2,7 @@ import {GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, 
 import app from "../firebase/firebase.config";
 import { createContext, useEffect, useState } from "react";
 
+
 const auth = getAuth(app);
 export const UserContext = createContext(null);
 
@@ -48,6 +49,7 @@ const AuthProvider = ({children}) => {
         }
     },[load]);
 
+
     const userInfo = {
         user,
         registerUser,
@@ -60,9 +62,12 @@ const AuthProvider = ({children}) => {
     }
     
     return (
+        
+        
         <UserContext.Provider value={userInfo}>
            {children} 
         </UserContext.Provider>
+        
     );
 };
 

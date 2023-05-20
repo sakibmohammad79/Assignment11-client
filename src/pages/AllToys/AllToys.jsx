@@ -5,9 +5,10 @@ const AllToys = () => {
   const [toys, setToys] = useState([]);
   const [searchText, setSearchText] = useState('');
   console.log(toys);
+  const limit = 20;
 
   useEffect(() => {
-    fetch("https://assignment11-toy-market-place-server.vercel.app/toys")
+    fetch(`https://assignment11-toy-market-place-server.vercel.app/toys?limit=${limit}`)
       .then((res) => res.json())
       .then((data) => setToys(data));
   }, []);
