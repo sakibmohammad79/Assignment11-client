@@ -3,9 +3,11 @@ import { UserContext } from "../../providers/AuthProvider";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useTitle from "../../hook/useTitle";
 
 
 const ToysCard = ({toy}) => {
+  useTitle('All Toys')
     const {user} = useContext(UserContext)
     const { _id, toy_pic, toy_name, category, price, quantity, sellerName } = toy;
 
@@ -24,7 +26,7 @@ const ToysCard = ({toy}) => {
         <td>
           <div className="flex items-center space-x-3">
             <div className="avatar">
-              <div className="mask mask-squircle w-12 h-12">
+              <div className="mask mask-squircle w-20 h-20">
                 <img src={toy_pic} alt="Avatar Tailwind CSS Component" />
               </div>
             </div>

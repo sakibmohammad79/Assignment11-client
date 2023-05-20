@@ -1,5 +1,7 @@
+import useTitle from "../../../hook/useTitle";
 
 const Banner = () => {
+  useTitle('Home');
     return (
         <div className="carousel w-full" style={{height: '550px'}}>
   <div id="slide1" className="carousel-item relative w-full">

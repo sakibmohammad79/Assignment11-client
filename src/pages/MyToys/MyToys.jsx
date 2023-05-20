@@ -2,11 +2,13 @@ import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../providers/AuthProvider";
 import MyToysTable from "./MyToysTable";
 import Swal from "sweetalert2";
+import useTitle from "../../hook/useTitle";
 
 
 const MyToys = () => {
     const {user} = useContext(UserContext); 
     const [toys, setToys] = useState([]);
+    useTitle('My Toys');
 
     useEffect(()=> {
         fetch(`https://assignment11-toy-market-place-server.vercel.app/userToys?email=${user?.email}`)
@@ -56,7 +58,7 @@ const MyToys = () => {
               <th>
                 Delete
               </th>
-              <th>Toys Name And Category</th>
+              <th>Toy Name And Sub-Category</th>
               <th>Seller Name</th>
               <th>Seller email</th>
               <th>Price</th>

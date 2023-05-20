@@ -13,7 +13,8 @@ const Gallery = () => {
                 <img src="https://i.postimg.cc/9FG9QKCp/6.webp" alt="" />
                 <img src="https://i.postimg.cc/Hxhx64Hj/5.webp" alt="" />
             </div>
-            <div className='flex justify-around md:mx-28 mt-12 mb-6'>
+            <div className='grid grid-cols-3 md:grid-cols-6 mt-12 mb-6 max-w-6xl mx-auto'>
+                <img src="https://i.postimg.cc/q7GdFdPN/2-dc4d57a4-5539-4530-97bc-6d56c402e1a1-130x130-2x.webp" alt="" />
                 <img src="https://i.postimg.cc/K8WmScws/1-f30483b4-384a-400a-8ea8-a8315159f04c-130x130-2x.webp" alt="" />
                 <img src="https://i.postimg.cc/g06mYFPc/5-6a752e69-fdc2-47e8-9a78-109f4fd3acac-130x130-2x.webp" alt="" />
                 <img src="https://i.postimg.cc/7PNDPnjz/4-fd8a33da-a309-4ef0-8ae0-59f48c8c53aa-130x130-2x.webp" alt="" />

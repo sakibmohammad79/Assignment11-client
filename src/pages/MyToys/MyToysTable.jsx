@@ -28,7 +28,7 @@ const MyToysTable = ({ toy, handleDelete }) => {
       <td>
         <div className="flex items-center space-x-3">
           <div className="avatar">
-            <div className="mask mask-squircle w-12 h-12">
+            <div className="mask mask-squircle w-20 h-20">
               <img src={toy_pic} alt="Avatar Tailwind CSS Component" />
             </div>
           </div>

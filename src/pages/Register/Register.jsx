@@ -3,12 +3,14 @@ import { useContext, useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { UserContext} from "../../providers/AuthProvider";
+import useTitle from "../../hook/useTitle";
 
 
 const Register = () => {
     const {registerUser, googleSignIn, githubSignIn, setLoad} = useContext(UserContext);
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(null);
+    useTitle('Register');
 
     const registerHandle = (event) =>{
         event.preventDefault();
