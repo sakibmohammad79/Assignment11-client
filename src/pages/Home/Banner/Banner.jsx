@@ -39,7 +39,7 @@ const Banner = () => {
     </div>
   </div> 
   <div id="slide3" className="carousel-item relative w-full">
-    <img src="https://i.postimg.cc/Xvxc1q65/pexels-cottonbro-studio-3662667.jpg" className="w-full" />
+    <img src="https://i.postimg.cc/8khFwF54/pexels-yan-krukau-6209349.jpg" className="w-full" />
     <div className="h-full flex items-center  absolute  left-0 top-0 text-white ">
       <div className='w-full text-white space-y-6 pl-8'>
       <h3 className='text-5xl bold text-rose-600'>Hot & Trendy</h3>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const NewsLetter = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto justify-center items-center mb-24 mt-24">
-      <div data-aos="fade-up-left"  data-aos-duration="1000">
+      <div data-aos="fade-up-left"  data-aos-duration="2000">
         <img
           style={{ height: "350px", width:'100%' }}
           src="https://i.postimg.cc/zD2KMTT7/7798354.jpg"
@@ -33,7 +33,7 @@ const NewsLetter = () => {
         <Link><FaYoutube style={{height: '2rem', width: '2rem'}}/></Link>
         </div>
       </div>
-      <div data-aos="fade-up-right"  data-aos-duration="1000" >
+      <div data-aos="fade-up-right"  data-aos-duration="2000" >
         <img
           style={{ height: "350px", width: '100%' }}
           src="https://i.postimg.cc/kgsn1vbX/4011306.jpg"
