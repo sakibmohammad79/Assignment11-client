@@ -25,17 +25,17 @@ const ToyDetails = () => {
         <div className="grid grid-cols-2 gap-6">
           <div className="space-y-2">
                 <h2 className="font-bold text-teal-400 text-3xl text-start">Toy Details</h2>
-                <h3>Name: {toy_name}</h3>
-                <h3>About: {details}.</h3>
-                <h3>Price: {'$'+ price}</h3>
-                <h3>Quantity: {quantity}</h3>
+                <h3><span className="text-2xl font-bold text-rose-500">Name:</span> <span className="font-bold text-slate-500">{toy_name}</span></h3>
+                <h3><span className="text-2xl font-bold text-rose-500">About:</span> <span className="font-bold text-slate-500">{details}</span></h3>
+                <h3><span className="text-2xl font-bold text-rose-500">Price:</span> <span className="font-bold text-slate-500">{'$'+ price}</span></h3>
+                <h3><span className="text-2xl font-bold text-rose-500">Quantity:</span > <span className="font-bold text-slate-500">{quantity}</span></h3>
           </div>
           <div className="space-y-2">
             <h2 className="font-bold text-teal-400 text-3xl text-start">Seller Details</h2>
-                <h3>Name: {user?.displayName}</h3>
-                <h3>Email: {user?.email}.</h3>
-                <h3>Company: Educational Development Co.</h3>
-                <h3>Status: Professional</h3>
+                <h3><span className="text-2xl font-bold text-rose-500">Name:</span> <span className="font-bold text-slate-500">{user?.displayName}</span></h3>
+                <h3><span className="text-2xl font-bold text-rose-500">Email:</span> <span className="font-bold text-slate-500">{user?.email}</span>.</h3>
+                <h3><span className="text-2xl font-bold text-rose-500">Company:</span > <span className="font-bold text-slate-500">Educational Development Com.</span></h3>
+                <h3><span className="text-2xl font-bold text-rose-500">Status:</span> <span className="font-bold text-slate-500">Professional</span></h3>
           </div>
         </div>
         <div className="card-actions">
