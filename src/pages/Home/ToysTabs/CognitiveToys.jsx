@@ -4,7 +4,7 @@ import CognitiveToysList from "./CognitiveToysList";
 
 const CognitiveToys = () => {
     const [toys, setToys] = useState([]);
-    console.log(toys);
+    //console.log(toys);
     useEffect(()=>{
         fetch('https://assignment11-toy-market-place-server.vercel.app/toys?category=Cognitive%20Development%20Toys')
         .then((res)=>res.json())

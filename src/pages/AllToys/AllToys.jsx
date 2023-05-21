@@ -5,7 +5,7 @@ import useTitle from "../../hook/useTitle";
 const AllToys = () => {
   const [toys, setToys] = useState([]);
   const [searchText, setSearchText] = useState('');
-  console.log(toys);
+  //console.log(toys);
   useTitle('All Toys')
 
   useEffect(() => {
@@ -22,7 +22,15 @@ const AllToys = () => {
   }
   return (
     <div>
-      <div className="form-control my-8 w-1/4 ml-auto">
+      <div className="flex px-6">
+      <div className="stack my-8">
+        <div className="card shadow-md bg-teal-400 text-primary-content">
+          <div className="card-body">
+            <p>ALL TOYS SORTED BY LOW PRICE TO  HIGH PRICE</p>
+          </div>
+        </div>
+      </div>
+      <div className="form-control my-12 ml-auto">
         <div className="input-group">
           <input
           onChange={(e) => setSearchText(e.target.value)}
@@ -47,6 +55,7 @@ const AllToys = () => {
             </svg>
           </button>
         </div>
+      </div>
       </div>
       <div className="overflow-x-auto w-full">
         <table className="table w-full">

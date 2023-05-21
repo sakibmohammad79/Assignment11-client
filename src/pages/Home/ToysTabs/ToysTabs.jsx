@@ -3,10 +3,21 @@ import "react-tabs/style/react-tabs.css";
 import SensoryToys from "./SensoryToys";
 import CognitiveToys from "./CognitiveToys";
 import MotorToys from "./MotorToys";
+import { useContext } from "react";
+import { UserContext } from "../../../providers/AuthProvider";
 
 const ToysTabs = () => {
+const {loading} = useContext(UserContext)
+
+const handleLoad = () => {
+  <progress className="progress w-56"></progress>
+}
+  
   return (
-    <div className="">
+    <div>
+        {
+          loading ? handleLoad :
+          <div>
         <div>
             <h3 className="text-4xl font-extrabold text-center mb-6"> Educational Baby Toys</h3>
         </div>
@@ -33,6 +44,9 @@ const ToysTabs = () => {
           </div>
         </TabPanel>
       </Tabs>
+
+            </div>
+        }
     </div>
   );
 };

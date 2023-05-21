@@ -1,15 +1,14 @@
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 import { useContext } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { UserContext } from '../../../providers/AuthProvider';
 
 const CognitiveToysList = ({toy}) => {
   const {user} = useContext(UserContext)
-  const toyDetails = useLoaderData();
-  console.log(toyDetails);
+
     const { _id, toy_pic, toy_name, price, rating} = toy;
 
     const handleToast = () => {

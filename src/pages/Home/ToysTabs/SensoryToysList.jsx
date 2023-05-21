@@ -11,7 +11,7 @@ const SensoryToysList = ({ toy }) => {
     const {user} = useContext(UserContext)
  const { _id, toy_pic, toy_name, price, rating} = toy;
   
- const handleToast = () => {
+  const handleToast = () => {
   if(!user){
     toast("You have to log in first to view details!");
   }
@@ -37,7 +37,7 @@ const SensoryToysList = ({ toy }) => {
         <p className="font-bold">{rating}</p>
         </div>
         <div className="card-actions justify-end">
-          <Link to={`/toysdetails/${_id}`}><button onClick={handleToast} className="btn bg-teal-400 border-none">View Details</button></Link>
+          <Link to={`/toysdetails/${_id}`}><button  onClick={handleToast} className="btn bg-teal-400 border-none">View Details</button></Link>
         </div>
       </div>
       <ToastContainer></ToastContainer>
