@@ -66,7 +66,7 @@ const AllToys = () => {
                   <input type="checkbox" className="checkbox" />
                 </label>
               </th>
-              <th>Toys Name And Category</th>
+              <th>Toys Name And Sub-Category</th>
               <th>Seller Name</th>
               <th>Price</th>
               <th>Quantity</th>
